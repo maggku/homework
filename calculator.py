@@ -1,3 +1,50 @@
+str = "12 * 34 * 56/78"
+def div(x, y):
+    return int(x) / int(y)
+
+def mult(x, y):
+    return int(x) * int(y)
+
+def calculate_first(str):
+
+    previous_operation = None
+    for i, char in enumerate(str):
+
+        print(i, char)
+
+        if char == "*":
+            left = ""
+            right = ""
+            print(f"Found * at position {i}")
+            pos = i - 1
+            while pos >= 0 and str[pos] == " ":
+                pos = pos - 1
+            while pos >= 0 and isdigit(str[pos]):
+                if left == "":
+                    left = str[pos]
+                else:
+                    left = str[pos] + left
+                pos = pos - 1
+            print("  " + left)
+
+            pos2 = i + 1
+            while pos2 != len(str) and str[pos2] == " ":
+                pos2 = pos2 + 1
+            while pos2 != len(str) - 1 and isdigit(str[pos2]):
+                # make a loop to catch all chars after * until the next *,/,+,-  and join them one by one.
+                if right == "":
+                    right = str[pos2]
+                else:
+                    right += str[pos2]
+                pos2 = pos2 + 1
+            print("  " + right)
+            print(mult(left, right))
+
+        elif char == "/":
+            print(f"I have found / in possition {i}")
+
+        else:
+            continue
 #str = "11 + 24 + 22 - 15"
 #def add(x, y):
 #    return int(x) + int(y)
