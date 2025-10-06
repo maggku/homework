@@ -1,4 +1,5 @@
-str = "12 * 34 * 56/78"
+#str = "12 * 34 * 56/78"
+
 def div(x, y):
     return int(x) / int(y)
 
