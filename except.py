@@ -17,15 +17,16 @@
 
 
 def division():
-    try:
-        x = int(input("What's x?"))
-        y = int(input("What's y?"))
-        print(x / y)
-        return x / y
-    except ValueError:
-        print("Podano nieprawidłowe dane! / Incorrect input!")
-    except ZeroDivisionError:
-        print("Nie można dzielić przez zero! / Division with 0 is not possible!")
+    while True:
+        try:
+            x = int(input("What's x?"))
+            y = int(input("What's y?"))
+            print(x / y)
+            return x / y
+        except ValueError:
+            print("Podano nieprawidłowe dane! / Incorrect input!")
+        except ZeroDivisionError:
+            print("Nie można dzielić przez zero! / Division with 0 is not possible!")
 
 
 division()
