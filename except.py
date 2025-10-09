@@ -15,8 +15,8 @@
 #zadanie na szóstkę:
 #Do testów wykorzystaj moduł "pytest". Trzeba będgit zie go zainstalować.
 
-
-def division():
+# With input
+def division1():
     while True:
         try:
             x = int(input("What's x?"))
@@ -29,5 +29,26 @@ def division():
             print("Nie można dzielić przez zero! / Division with 0 is not possible!")
 
 
-division()
+division1()
 
+
+# With parameters and tests
+def division2(x, y):
+        try:
+            print(x / y)
+            return x / y
+        except (ValueError, TypeError):
+            print("Podano nieprawidłowe dane! / Incorrect input!")
+            return None
+        except ZeroDivisionError:
+            print("Nie można dzielić przez zero! / Division with 0 is not possible!")
+            return None
+
+def test_division2():
+    assert division2(10,2) == 5
+    assert division2(10, 0) == None
+    assert division2(10, "dog") == None
+
+
+test_division2()
+print("All tests passed")
