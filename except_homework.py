@@ -29,7 +29,8 @@ def division1():
             print("Nie można dzielić przez zero! / Division with 0 is not possible!")
 
 
-division1()
+if __name__ == "__main__":
+    division1()
 
 
 # With parameters and tests
