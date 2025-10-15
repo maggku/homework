@@ -23,46 +23,46 @@ wyswietl_wszystkie() – wypisuje wszystkie książki w bibliotece.
 
 """
 
-class Ksiazka():
-    def __init__(self, tytul, autor, rok_wydania):
-        self.tytul = tytul
-        self.autor = autor
-        self.rok_wydania = rok_wydania
+class Book():
+    def __init__(self, title, author, publishing_year):
+        self.title = title
+        self.author = author
+        self.publishing_year = publishing_year
 
 
     def __str__(self):
-        return f"{self.tytul} ({self.autor}, {self.rok_wydania})"
+        return f"{self.title} ({self.author}, {self.publishing_year})"
 
 
 
-class Biblioteka():
-    def __init__(self, ksiazki=None):
-        if ksiazki == None:
-            self.ksiazki = []
+class Library():
+    def __init__(self, books=None):
+        if books == None:
+            self.books = []
         else:
-            self.ksiazki = ksiazki
+            self.books = books
 
-    def dodaj_ksiazke(self, ksiazka):
-        self.ksiazki.append(ksiazka)
+    def add_book(self, book):
+        self.books.append(book)
 
 
 
-    def usun_ksiazke(self, tytul):
-        for ksiazka in self.ksiazki:
-            if ksiazka.tytul == tytul:
-                self.ksiazki.remove(ksiazka)
+    def remove_book(self, title):
+        for book in self.books:
+            if book.title == title:
+                self.books.remove(book)
                 return
 
-    def wyszukaj_po_autorze(self, autor):
-        wybrane = []
-        for ksiazka in self.ksiazki:
-            if ksiazka.autor == autor:
-                wybrane.append(ksiazka)
+    def author_search(self, author):
+        found = []
+        for book in self.books:
+            if book.author == author:
+                found.append(book)
 
-        if wybrane:
-            return wybrane
+        if found:
+            return found
         else:
-            print("Nie ma ksiazek tego autora")
+            print("There are no books by this author.")
             return []
 
 
