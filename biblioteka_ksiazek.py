@@ -67,9 +67,9 @@ class Library():
 
 
 
-    def wyswietl_wszystkie(self):
-        for ksiazka in self.ksiazki:
-            print(ksiazka)
+    def show_all_books(self):
+        for book in self.books:
+            print(book)
 
 
 
