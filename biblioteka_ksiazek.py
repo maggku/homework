@@ -23,7 +23,7 @@ wyswietl_wszystkie() – wypisuje wszystkie książki w bibliotece.
 
 """
 
-class Book():
+class Book:
     def __init__(self, title, author, publishing_year):
         self.title = title
         self.author = author
@@ -35,7 +35,7 @@ class Book():
 
 
 
-class Library():
+class Library:
     def __init__(self, books=None):
         if books == None:
             self.books = []
