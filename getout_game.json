@@ -1,0 +1,78 @@
+[
+    {
+        "id": "start",
+        "text": "You wake up strapped to a chair. A TV flickers in front of you, showing a swirling image. You hear footsteps approaching.",
+        "choices": {
+            "try to resist": "resist",
+            "stare at the screen": "hypnotized"
+        }
+    },
+    {
+        "id": "resist",
+        "text": "You fight against the straps and manage to break free. You hear voices upstairs. There’s a door to the basement and a hallway to the kitchen.",
+        "choices": {
+            "go to basement": "basement",
+            "go to kitchen": "kitchen"
+        }
+    },
+    {
+        "id": "hypnotized",
+        "text": "The screen’s spiral pulls you in. Your mind goes blank. You lose consciousness...",
+        "choices": {
+            "wake up": "operation"
+        }
+    },
+    {
+        "id": "basement",
+        "text": "You find surgical tools and medical notes about brain transplants. You realize the operation is about to happen on you.",
+        "choices": {
+            "escape outside": "road",
+            "hide": "caught"
+        }
+    },
+    {
+        "id": "kitchen",
+        "text": "You see the mother preparing something at the counter. She turns slowly and smiles. You spot the keys on the table.",
+        "choices": {
+            "grab keys": "road",
+            "attack her": "caught"
+        }
+    },
+    {
+        "id": "operation",
+        "text": "You wake up unable to move. A surgeon leans over you. The operation begins... Your vision fades to white.",
+        "choices": {
+            "the end": "ending_operation"
+        }
+    },
+    {
+        "id": "road",
+        "text": "You run until you reach the road outside the house. Blue lights appear in the distance.",
+        "choices": {
+            "call for help": "ending_friend",
+            "stay silent": "ending_police"
+        }
+    },
+    {
+        "id": "caught",
+        "text": "They catch you before you can escape. The father injects something into your arm. You black out.",
+        "choices": {
+            "wake up": "operation"
+        }
+    },
+    {
+        "id": "ending_friend",
+        "text": "Your friend pulls up in his car — you made it! You’re safe at last. GOOD ENDING.",
+        "choices": {}
+    },
+    {
+        "id": "ending_police",
+        "text": "A regular officer finds you. They arrest you, thinking you’re the attacker. BAD ENDING.",
+        "choices": {}
+    },
+    {
+        "id": "ending_operation",
+        "text": "You wake up in a different body. The operation was a success. GAME OVER.",
+        "choices": {}
+    }
+]
