@@ -47,11 +47,11 @@ class Hero:
     @classmethod
     def load(cls, name):
         with open("getout_save_game.json", "r" ) as file:
-            data = json.load(file)
+            all_heroes = json.load(file)
 
 
-        if name in data:
-            return data[name]["current_paragraph"]
+        if name in all_heroes:
+            return all_heroes[name]["current_paragraph"]
         else:
             print("Create your hero")
 
