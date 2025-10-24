@@ -46,8 +46,12 @@ class Hero:
 
     @classmethod
     def load(cls, name):
-        with open("getout_save_game.json", "r" ) as file:
-            all_heroes = json.load(file)
+        try:
+            with open("getout_save_game.json", "r" ) as file:
+                all_heroes = json.load(file)
+        except FileNotFoundError:
+            print("No saved games found")
+
 
 
         if name in all_heroes:
